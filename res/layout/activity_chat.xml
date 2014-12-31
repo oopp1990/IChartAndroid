@@ -1,0 +1,237 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context=".ChatActivity" >
+
+    <!-- tools:context=".MyStore" -->
+
+    <RelativeLayout
+        android:id="@+id/msg_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/back"
+            android:gravity="center"
+            android:onClick="back" />
+        <!-- android:onClick="back" -->
+
+        <TextView
+            android:id="@+id/chat_msgtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:singleLine="true"
+            android:text="消息"
+            android:textColor="@color/font"
+            android:textSize="25dp" />
+    </RelativeLayout>
+    <!--  -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/chat_end"
+        android:layout_below="@id/msg_top" >
+
+        <ListView
+            android:id="@+id/chat_listview"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:background="#00000000"
+            android:cacheColorHint="#00000000"
+            android:divider="#00000000"
+            android:dividerHeight="0dp"
+            android:focusable="true"
+            android:focusableInTouchMode="true" >
+        </ListView>
+
+        <ProgressBar
+            android:id="@+id/widget108"
+            style="?android:attr/progressBarStyleSmallTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/msgbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/chat_end"
+        android:background="@drawable/chat_msgmore"
+        android:orientation="vertical" >
+
+        <!-- android:visibility="gone" -->
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/chat_red" />
+
+            <TextView
+                android:id="@+id/chat_text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/img1"
+                android:text="老板，请问有现货吗？"
+                android:textColor="@color/font"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp" >
+
+            <ImageView
+                android:id="@+id/img2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/chat_red" />
+
+            <TextView android:id="@+id/chat_text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/img2"
+                android:text="老板，价格优惠点呗？"
+                android:textColor="@color/font"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp" >
+
+            <ImageView
+                android:id="@+id/img3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/chat_red" />
+
+            <TextView android:id="@+id/chat_text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/img3"
+                android:text="好的，谢谢!" 
+                 android:textColor="@color/font"
+                   />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp" >
+
+            <ImageView
+                android:id="@+id/img4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/chat_red" />
+
+            <TextView  android:id="@+id/chat_text4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/img4"
+                android:text="现在忙，一会儿联系您！" 
+                   android:textColor="@color/font"
+                   />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/but_box"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/chat_end"
+        android:background="@drawable/chat_box"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:visibility="gone" >
+ <!--  -->
+
+        <Button
+            android:id="@+id/btn_face"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@color/alpha"
+            android:drawableTop="@drawable/emoji"
+            android:text="表情"
+            android:textColor="@color/font"
+            android:textSize="10dp" />
+
+        <Button
+            android:id="@+id/chat_cam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:background="@color/alpha"
+            android:drawableTop="@drawable/cam"
+            android:onClick="chatMore"
+            android:text="拍照"
+            android:textColor="@color/font"
+            android:textSize="10dp" />
+
+        <Button
+            android:id="@+id/chat_addimg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:background="@color/alpha"
+            android:drawableTop="@drawable/img"
+            android:onClick="chatMore"
+            android:text="图片"
+            android:textColor="@color/font"
+            android:textSize="10dp" />
+    </RelativeLayout>
+
+    <include
+        android:id="@+id/chat_end"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        layout="@layout/chat_bottom"
+        android:background="@color/darkgray"
+        android:orientation="horizontal" />
+
+</RelativeLayout>

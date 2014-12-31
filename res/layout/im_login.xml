@@ -1,0 +1,102 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white"
+    android:orientation="vertical" 
+     style="@style/AnimationFade">
+ <!-- tools:context=".ChatActivity" -->
+
+    <RelativeLayout
+        android:id="@+id/login_top"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp" >
+<!-- 
+        <Button
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/back"
+            android:gravity="center"
+            android:onClick="back" />
+        android:onClick="back" -->
+
+        <TextView
+            android:id="@+id/chat_msgtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="登录"
+            android:textColor="@color/font"
+            android:textSize="20dp" />
+        <TextView android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="@color/lightgray"
+            android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+	<LinearLayout android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_margin="20dp"
+	    android:layout_below="@+id/login_top"
+	    android:orientation="vertical">
+	    <EditText android:id="@+id/username"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:background="@drawable/login_username"
+	        android:layout_marginTop="20dp"
+	        android:hint="请输入您的账号"
+	        android:paddingLeft="45dp"
+	        android:singleLine="true"/>
+	    <EditText android:id="@+id/password"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:background="@drawable/login_password"
+	        android:layout_marginTop="30dp"
+	        android:hint="请输入您的密码"
+	        android:singleLine="true"
+	        android:paddingLeft="45dp"
+	        android:password="true"/>
+	    <RelativeLayout android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_margin="20dp">
+	        <Button android:id="@+id/regnow"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/reg"
+	            android:textSize="20dp"
+	            android:textColor="@color/dack"
+	            android:layout_marginLeft="20dp"
+	            android:onClick="click"
+	            android:background="@color/alpha"
+	            />
+	        
+	        <Button android:id="@+id/resetpas"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/resetPass"
+	            android:layout_alignParentRight="true"
+	            android:textSize="20dp"
+	            android:textColor="@color/dack"
+	            android:layout_marginRight="20dp"
+	            android:background="@color/alpha"
+	            android:onClick="click"
+	          	/>
+	        
+	        <Button android:id="@+id/submit"
+	            android:layout_width="150dp"
+	            android:layout_height="35dp"
+	            android:background="@drawable/yj_1"
+	            android:layout_below="@+id/resetpas"
+	            android:layout_centerHorizontal="true"
+	            android:layout_marginTop="40dp"
+	            android:text="登  录"
+	            android:textColor="@color/white"
+	            android:textSize="20dp"
+	            android:onClick="click"/>
+	    </RelativeLayout>
+	    	
+	    
+	</LinearLayout>
+</RelativeLayout>
