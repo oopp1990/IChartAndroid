@@ -6,6 +6,7 @@ import java.nio.channels.SocketChannel;
 
 import android.app.Activity;
 import android.content.ComponentName;
+import android.util.Log;
 
 import com.alibaba.fastjson.JSON;
 import com.nb82.bean.db.CFrameDb;
@@ -15,11 +16,14 @@ import net.cxd.andimclient.app.MyApplication;
 import net.cxd.andimclient.util.SoundManager;
 import net.cxd.andimclient.view.IndexAc;
 import net.cxd.andimclient.view.UserMsgAc;
+import net.cxd.im.entity.UserInfo;
 import net.cxd.im.entity.UserMsg;
 import net.cxd.im.server.MessageLister;
+import net.cxd.util.ByteUtil;
 
 public class MessageListener extends MessageLister {
-
+	private static final String tag = "MessageListener";
+	
 	@Override
 	public void open(SocketChannel channel) throws IOException {
 		// TODO Auto-generated method stub
@@ -28,8 +32,10 @@ public class MessageListener extends MessageLister {
 
 	@Override
 	public void openComplate(SocketChannel channel) throws IOException {
-		// TODO Auto-generated method stub
-
+		Log.i(tag, "openComplate , will login .... ");
+		UserInfo info = (UserInfo) MyApplication.ctx.cache.get("userInfo");
+		channel.write(ByteBuffer.wrap(ByteUtil.byteMerger(new byte[]{1}, (info.getUid()+"").getBytes())));
+//		channel.configureBlocking(false);
 	}
 
 	@Override
@@ -56,8 +62,9 @@ public class MessageListener extends MessageLister {
 							// 收到消息和当前聊天用户ID一样
 							msg.setIsRead(1);// 已读
 							msgAc.newMsg(msg);
-						}else{
-							SoundManager.newInstance(MyApplication.ctx).playSound(1);
+						} else {
+							SoundManager.newInstance(MyApplication.ctx)
+									.playSound(1);
 						}
 					} else {
 						// TODO 播放声音， 并且将未读消息添加到IndexMsg上面，并且显示小红点
@@ -66,14 +73,17 @@ public class MessageListener extends MessageLister {
 							IndexAc indexAc = (IndexAc) AcUtil.getAc();
 							indexAc.newMsg(msg);
 						}
-						SoundManager.newInstance(MyApplication.ctx).playSound(1);
+						SoundManager.newInstance(MyApplication.ctx)
+								.playSound(1);
 					}
 				} else {
 					// TODO notify
-					SoundManager.newInstance(MyApplication.ctx).notifyAction(msg);
+					SoundManager.newInstance(MyApplication.ctx).notifyAction(
+							msg);
 				}
 				// save msg
-				CFrameDb cFrameDb = (CFrameDb) MyApplication.ctx.cache.get("cFrameDb");
+				CFrameDb cFrameDb = (CFrameDb) MyApplication.ctx.cache
+						.get("cFrameDb");
 				cFrameDb.save(msg);
 			} catch (Exception e) {
 				e.printStackTrace();

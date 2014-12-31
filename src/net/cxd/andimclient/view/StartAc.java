@@ -30,6 +30,7 @@ public class StartAc extends BaseActivity {
 	MyApplication app;
 	String name;
 	String password;
+	private boolean isLogin = false;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -38,11 +39,13 @@ public class StartAc extends BaseActivity {
 		HttpUri.BASE_URL = "http://192.168.0.159:8080/WebImService/";
 		handler = new MyHandler();
 	}
+
 	@Override
 	protected void onResume() {
 		super.onResume();
 		init(null);
 	}
+
 	@Override
 	public void init(Object object) {
 		app = ((MyApplication) getApplication());
@@ -54,6 +57,7 @@ public class StartAc extends BaseActivity {
 				name = model.get("name").toString();
 				password = model.get("password").toString();
 				setContentView(R.layout.im_start);
+				isLogin = true;
 			} else
 				setContentView(R.layout.im_login);
 		} catch (Exception e) {
@@ -73,7 +77,11 @@ public class StartAc extends BaseActivity {
 			try {
 				User user = new User(name, password);
 				user.setLastLogin(System.currentTimeMillis());
-				((CFrameDb) app.cache.get("cFrameDb")).save(user);
+				if (isLogin)
+					((CFrameDb) app.cache.get("cFrameDb")).update(user);
+				else
+					((CFrameDb) app.cache.get("cFrameDb")).save(user);
+
 			} catch (DbException e) {
 				e.printStackTrace();
 			}
@@ -90,9 +98,11 @@ public class StartAc extends BaseActivity {
 		Toast.makeText(this, resultBean.getMessage(), Toast.LENGTH_SHORT)
 				.show();
 	}
+
 	public void back(View view) {
 		setContentView(R.layout.im_login);
 	}
+
 	public void click(View view) {
 		if (view == null || view.getId() == R.id.submit) {// login
 			if (view != null) {
@@ -130,7 +140,8 @@ public class StartAc extends BaseActivity {
 				Toast.makeText(this, "两次输入的密码不一样！！", Toast.LENGTH_SHORT).show();
 				return;
 			}
-			Log.i("login >>>>>>>>> ", "username:" + name + " password : " + password);
+			Log.i("login >>>>>>>>> ", "username:" + name + " password : "
+					+ password);
 			Task task = new Task(TaskId.regist, UserService.class, "regist",
 					handler, null);
 			task.params.put("name", name);
@@ -141,7 +152,7 @@ public class StartAc extends BaseActivity {
 
 	}
 
-	class MyHandler extends Handler{
+	class MyHandler extends Handler {
 		@Override
 		public void handleMessage(Message msg) {
 			super.handleMessage(msg);
@@ -154,7 +165,6 @@ public class StartAc extends BaseActivity {
 			case TaskId.regist:
 				if (msg.obj != null) {
 					freash(msg.obj);
-					
 				}
 				break;
 			default:
@@ -163,5 +173,6 @@ public class StartAc extends BaseActivity {
 
 		}
 	}
-	private Handler handler ;
+
+	private Handler handler;
 }

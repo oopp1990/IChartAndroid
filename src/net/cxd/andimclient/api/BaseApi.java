@@ -42,11 +42,9 @@ public class BaseApi {
 		CFrameDb db = (CFrameDb) task.params.get("cFrameDb");
 		try {
 			return db.findAllBySql(UserMsg.class, sql);
-		} catch (SQLException e) {
+		} catch (Exception e) {
 			e.printStackTrace();
-		} catch (DbException e) {
-			e.printStackTrace();
-		}
+		} 
 		return null;
 	}
 	

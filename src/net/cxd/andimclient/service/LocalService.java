@@ -85,7 +85,7 @@ public class LocalService extends Service {
 				if (info != null && info.isAvailable()) {
 					Log.i(tag, "当前有可用网络！");
 					isOnline = true;
-					if (MyApplication.ctx.cache.get("user") != null) {
+					if (MyApplication.ctx.cache.get("userInfo") != null) {
 						if (imServer.getChannel() == null) {
 							ImThread.interrupt();
 							ImThread.start();
