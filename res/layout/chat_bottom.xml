@@ -17,7 +17,7 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
             android:background="@color/alpha"
-             android:onClick="chatMore"
+             android:onClick="click"
             android:src="@drawable/chat_u" />
         <!-- android:src="@drawable/imgbtn" -->
 
@@ -29,7 +29,7 @@
             android:layout_marginLeft="8dip"
             android:layout_toRightOf="@id/btn_moremsg"
             android:background="@null"
-            android:onClick="chatMore"
+            android:onClick="click"
             android:src="@drawable/more" />
         <!-- android:layout_alignParentLeft="true"  ib_face -->
 
@@ -40,7 +40,7 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:background="@drawable/yj_1"
-            android:onClick="chatMore"
+            android:onClick="click"
             android:text="发送" />
 
         <EditText

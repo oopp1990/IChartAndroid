@@ -23,12 +23,12 @@ import com.nb82.view.bitmap.CBitmap;
 public class IndexMsgAdapter extends BaseAdapter  {
 	private List<UserMsg> list = new ArrayList<UserMsg>();
 	private Context context;
-	private CBitmap cBitmap;
+	private CBitmap cbitmap;
 
 	public IndexMsgAdapter(Context context) {
 		this.context = context;
 		MyApplication app = (MyApplication)context;
-		cBitmap = (CBitmap) app.cache.get("cBitmap");
+		cbitmap = (CBitmap) app.cache.get("cbitmap");
 	}
 
 
@@ -69,7 +69,7 @@ public class IndexMsgAdapter extends BaseAdapter  {
 			convertView.setTag(hoder);
 		}
 		if (msg.getPhotoFile() != null) {
-			cBitmap.display(hoder.msg_head, msg.getPhotoFile());
+			cbitmap.display(hoder.msg_head, msg.getPhotoFile());
 		}
 		if ( msg.getNickName()!= null) {
 			hoder.msg_name.setText(msg.getNickName());

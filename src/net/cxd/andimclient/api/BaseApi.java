@@ -38,7 +38,7 @@ public class BaseApi {
 	}
 
 	public List<UserMsg> getIndexMsgList(Task task) {
-		String sql = "select distinct m.uid ,m.oid, m.msgType,m.contentType ,m.time,m.isSend,"
+		String sql = "select distinct m.uid ,m.oid, m.msgType,m.contentType ,m.time,m.isSend,m.photoFile,m.isRead,"
 				+ "m.content from UserMsg m where m.time=(select max(time) from UserMsg where uid = m.uid) order by time DESC;";
 		CFrameDb db = (CFrameDb) MyApplication.ctx.cache.get("cFrameDb");
 		try {

@@ -9,7 +9,7 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_marginBottom="50dp"
-        android:background="#00000000" >
+        android:background="@null" >
     </android.support.v4.view.ViewPager>
 
     <LinearLayout
@@ -24,9 +24,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#00000000"
-            android:clickable="false"
-            android:focusableInTouchMode="false"
+            android:background="@null"
             android:onClick="changeLayout"
             android:src="@drawable/menu_msg" />
 
@@ -35,9 +33,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#00000000"
-            android:clickable="false"
-            android:focusableInTouchMode="false"
+            android:background="@null"
             android:src="@drawable/menu_my" />
 
         <ImageButton
@@ -45,9 +41,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#00000000"
-            android:clickable="false"
-            android:focusableInTouchMode="false"
+            android:background="@null"
             android:src="@drawable/menu_fabu" />
     </LinearLayout>
 

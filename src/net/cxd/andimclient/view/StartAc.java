@@ -88,137 +88,137 @@ public class StartAc extends BaseActivity {
 				else
 					db.save(user);
 
-				UserMsg msg = new UserMsg();
-				msg.setUid(1001);
-				msg.setOid(info.getUid());
-				msg.setNickName("测试1");
-				msg.setMsgType(MsgType.USERMSG.getType());
-				msg.setContentType(MsgType.TXT.getType());
-				msg.setTime(System.currentTimeMillis());
-				msg.setPhotoFile("http://img.iknow.bdimg.com/zhidaoribao2014/2015year/0104/jctj.jpg?t=1420329621");
-				msg.setContent("这里是测试内容， 正在进行测试查看测试效果！......");
-				db.save(msg);
-
-				msg = new UserMsg();
-				msg.setUid(1002);
-				msg.setOid(info.getUid());
-				msg.setNickName("测试2");
-				msg.setMsgType(MsgType.USERMSG.getType());
-				msg.setContentType(MsgType.TXT.getType());
-				msg.setTime(System.currentTimeMillis());
-				msg.setPhotoFile("http://img.iknow.bdimg.com/zhidaoribao2014/2015year/0104/jctj.jpg?t=1420329621");
-				msg.setContent("这里是测试内容， 正在进行测试查看测试效果！......");
-				db.save(msg);
-
-				msg = new UserMsg();
-				msg.setUid(1003);
-				msg.setOid(info.getUid());
-				msg.setNickName("测试3");
-				msg.setMsgType(MsgType.USERMSG.getType());
-				msg.setContentType(MsgType.TXT.getType());
-				msg.setTime(System.currentTimeMillis());
-				msg.setPhotoFile("http://img.iknow.bdimg.com/zhidaoribao2014/2015year/0104/jctj.jpg?t=1420329621");
-				msg.setContent("这里是测试内容， 正在进行测试查看测试效果！......");
-				db.save(msg);
-
-				msg = new UserMsg();
-				msg.setUid(1004);
-				msg.setOid(info.getUid());
-				msg.setNickName("测试4");
-				msg.setMsgType(MsgType.USERMSG.getType());
-				msg.setContentType(MsgType.TXT.getType());
-				msg.setTime(System.currentTimeMillis());
-				msg.setPhotoFile("http://img.iknow.bdimg.com/zhidaoribao2014/2015year/0104/jctj.jpg?t=1420329621");
-				msg.setContent("这里是测试内容， 正在进行测试查看测试效果！......");
-				db.save(msg);
-
-				msg = new UserMsg();
-				msg.setUid(1005);
-				msg.setOid(info.getUid());
-				msg.setNickName("测试5");
-				msg.setMsgType(MsgType.USERMSG.getType());
-				msg.setContentType(MsgType.TXT.getType());
-				msg.setTime(System.currentTimeMillis());
-				msg.setPhotoFile("http://img.iknow.bdimg.com/zhidaoribao2014/2015year/0104/jctj.jpg?t=1420329621");
-				msg.setContent("这里是测试内容， 正在进行测试查看测试效果！......");
-				db.save(msg);
-
-				msg = new UserMsg();
-				msg.setUid(1006);
-				msg.setOid(info.getUid());
-				msg.setNickName("测试6");
-				msg.setMsgType(MsgType.USERMSG.getType());
-				msg.setContentType(MsgType.TXT.getType());
-				msg.setTime(System.currentTimeMillis());
-				msg.setPhotoFile("http://img.iknow.bdimg.com/zhidaoribao2014/2015year/0104/jctj.jpg?t=1420329621");
-				msg.setContent("这里是测试内容， 正在进行测试查看测试效果！......");
-				db.save(msg);
-
-				msg = new UserMsg();
-				msg.setUid(1006);
-				msg.setOid(info.getUid());
-				msg.setNickName("测试6");
-				msg.setMsgType(MsgType.USERMSG.getType());
-				msg.setContentType(MsgType.TXT.getType());
-				msg.setTime(System.currentTimeMillis());
-				msg.setPhotoFile("http://img.iknow.bdimg.com/zhidaoribao2014/2015year/0104/jctj.jpg?t=1420329621");
-				msg.setContent("这里是测试内容， 正在进行测试查看测试效果！......");
-				db.save(msg);
-				
-				msg = new UserMsg();
-				msg.setUid(1007);
-				msg.setOid(info.getUid());
-				msg.setNickName("测试7");
-				msg.setMsgType(MsgType.USERMSG.getType());
-				msg.setContentType(MsgType.TXT.getType());
-				msg.setTime(System.currentTimeMillis());
-				msg.setPhotoFile("http://img.iknow.bdimg.com/zhidaoribao2014/2015year/0104/jctj.jpg?t=1420329621");
-				msg.setContent("这里是测试内容， 正在进行测试查看测试效果！......");
-				db.save(msg);
-				
-				msg = new UserMsg();
-				msg.setUid(1008);
-				msg.setOid(info.getUid());
-				msg.setNickName("测试8");
-				msg.setMsgType(MsgType.USERMSG.getType());
-				msg.setContentType(MsgType.TXT.getType());
-				msg.setTime(System.currentTimeMillis());
-				msg.setPhotoFile("http://img.iknow.bdimg.com/zhidaoribao2014/2015year/0104/jctj.jpg?t=1420329621");
-				msg.setContent("这里是测试内容， 正在进行测试查看测试效果！......");
-				db.save(msg);
-				
-				msg = new UserMsg();
-				msg.setUid(1009);
-				msg.setOid(info.getUid());
-				msg.setNickName("测试9");
-				msg.setMsgType(MsgType.USERMSG.getType());
-				msg.setContentType(MsgType.TXT.getType());
-				msg.setTime(System.currentTimeMillis());
-				msg.setPhotoFile("http://img.iknow.bdimg.com/zhidaoribao2014/2015year/0104/jctj.jpg?t=1420329621");
-				msg.setContent("这里是测试内容， 正在进行测试查看测试效果！......");
-				db.save(msg);
-				
-				msg = new UserMsg();
-				msg.setUid(1010);
-				msg.setOid(info.getUid());
-				msg.setNickName("测试10");
-				msg.setMsgType(MsgType.USERMSG.getType());
-				msg.setContentType(MsgType.TXT.getType());
-				msg.setTime(System.currentTimeMillis());
-				msg.setPhotoFile("http://img.iknow.bdimg.com/zhidaoribao2014/2015year/0104/jctj.jpg?t=1420329621");
-				msg.setContent("这里是测试内容， 正在进行测试查看测试效果！......");
-				db.save(msg);
-				
-				msg = new UserMsg();
-				msg.setUid(1011);
-				msg.setOid(info.getUid());
-				msg.setNickName("测试11");
-				msg.setMsgType(MsgType.USERMSG.getType());
-				msg.setContentType(MsgType.TXT.getType());
-				msg.setTime(System.currentTimeMillis());
-				msg.setPhotoFile("http://img.iknow.bdimg.com/zhidaoribao2014/2015year/0104/jctj.jpg?t=1420329621");
-				msg.setContent("这里是测试内容， 正在进行测试查看测试效果！......");
-				db.save(msg);
+//				UserMsg msg = new UserMsg();
+//				msg.setUid(1001);
+//				msg.setOid(info.getUid());
+//				msg.setNickName("测试1");
+//				msg.setMsgType(MsgType.USERMSG.getType());
+//				msg.setContentType(MsgType.TXT.getType());
+//				msg.setTime(System.currentTimeMillis());
+//				msg.setPhotoFile("http://img.iknow.bdimg.com/zhidaoribao2014/2015year/0104/jctj.jpg?t=1420329621");
+//				msg.setContent("这里是测试内容， 正在进行测试查看测试效果！......");
+//				db.save(msg);
+//
+//				msg = new UserMsg();
+//				msg.setUid(1002);
+//				msg.setOid(info.getUid());
+//				msg.setNickName("测试2");
+//				msg.setMsgType(MsgType.USERMSG.getType());
+//				msg.setContentType(MsgType.TXT.getType());
+//				msg.setTime(System.currentTimeMillis());
+//				msg.setPhotoFile("http://img.iknow.bdimg.com/zhidaoribao2014/2015year/0104/jctj.jpg?t=1420329621");
+//				msg.setContent("这里是测试内容， 正在进行测试查看测试效果！......");
+//				db.save(msg);
+//
+//				msg = new UserMsg();
+//				msg.setUid(1003);
+//				msg.setOid(info.getUid());
+//				msg.setNickName("测试3");
+//				msg.setMsgType(MsgType.USERMSG.getType());
+//				msg.setContentType(MsgType.TXT.getType());
+//				msg.setTime(System.currentTimeMillis());
+//				msg.setPhotoFile("http://img.iknow.bdimg.com/zhidaoribao2014/2015year/0104/jctj.jpg?t=1420329621");
+//				msg.setContent("这里是测试内容， 正在进行测试查看测试效果！......");
+//				db.save(msg);
+//
+//				msg = new UserMsg();
+//				msg.setUid(1004);
+//				msg.setOid(info.getUid());
+//				msg.setNickName("测试4");
+//				msg.setMsgType(MsgType.USERMSG.getType());
+//				msg.setContentType(MsgType.TXT.getType());
+//				msg.setTime(System.currentTimeMillis());
+//				msg.setPhotoFile("http://img.iknow.bdimg.com/zhidaoribao2014/2015year/0104/jctj.jpg?t=1420329621");
+//				msg.setContent("这里是测试内容， 正在进行测试查看测试效果！......");
+//				db.save(msg);
+//
+//				msg = new UserMsg();
+//				msg.setUid(1005);
+//				msg.setOid(info.getUid());
+//				msg.setNickName("测试5");
+//				msg.setMsgType(MsgType.USERMSG.getType());
+//				msg.setContentType(MsgType.TXT.getType());
+//				msg.setTime(System.currentTimeMillis());
+//				msg.setPhotoFile("http://img.iknow.bdimg.com/zhidaoribao2014/2015year/0104/jctj.jpg?t=1420329621");
+//				msg.setContent("这里是测试内容， 正在进行测试查看测试效果！......");
+//				db.save(msg);
+//
+//				msg = new UserMsg();
+//				msg.setUid(1006);
+//				msg.setOid(info.getUid());
+//				msg.setNickName("测试6");
+//				msg.setMsgType(MsgType.USERMSG.getType());
+//				msg.setContentType(MsgType.TXT.getType());
+//				msg.setTime(System.currentTimeMillis());
+//				msg.setPhotoFile("http://img.iknow.bdimg.com/zhidaoribao2014/2015year/0104/jctj.jpg?t=1420329621");
+//				msg.setContent("这里是测试内容， 正在进行测试查看测试效果！......");
+//				db.save(msg);
+//
+//				msg = new UserMsg();
+//				msg.setUid(1006);
+//				msg.setOid(info.getUid());
+//				msg.setNickName("测试6");
+//				msg.setMsgType(MsgType.USERMSG.getType());
+//				msg.setContentType(MsgType.TXT.getType());
+//				msg.setTime(System.currentTimeMillis());
+//				msg.setPhotoFile("http://img.iknow.bdimg.com/zhidaoribao2014/2015year/0104/jctj.jpg?t=1420329621");
+//				msg.setContent("这里是测试内容， 正在进行测试查看测试效果！......");
+//				db.save(msg);
+//				
+//				msg = new UserMsg();
+//				msg.setUid(1007);
+//				msg.setOid(info.getUid());
+//				msg.setNickName("测试7");
+//				msg.setMsgType(MsgType.USERMSG.getType());
+//				msg.setContentType(MsgType.TXT.getType());
+//				msg.setTime(System.currentTimeMillis());
+//				msg.setPhotoFile("http://img.iknow.bdimg.com/zhidaoribao2014/2015year/0104/jctj.jpg?t=1420329621");
+//				msg.setContent("这里是测试内容， 正在进行测试查看测试效果！......");
+//				db.save(msg);
+//				
+//				msg = new UserMsg();
+//				msg.setUid(1008);
+//				msg.setOid(info.getUid());
+//				msg.setNickName("测试8");
+//				msg.setMsgType(MsgType.USERMSG.getType());
+//				msg.setContentType(MsgType.TXT.getType());
+//				msg.setTime(System.currentTimeMillis());
+//				msg.setPhotoFile("http://img.iknow.bdimg.com/zhidaoribao2014/2015year/0104/jctj.jpg?t=1420329621");
+//				msg.setContent("这里是测试内容， 正在进行测试查看测试效果！......");
+//				db.save(msg);
+//				
+//				msg = new UserMsg();
+//				msg.setUid(1009);
+//				msg.setOid(info.getUid());
+//				msg.setNickName("测试9");
+//				msg.setMsgType(MsgType.USERMSG.getType());
+//				msg.setContentType(MsgType.TXT.getType());
+//				msg.setTime(System.currentTimeMillis());
+//				msg.setPhotoFile("http://img.iknow.bdimg.com/zhidaoribao2014/2015year/0104/jctj.jpg?t=1420329621");
+//				msg.setContent("这里是测试内容， 正在进行测试查看测试效果！......");
+//				db.save(msg);
+//				
+//				msg = new UserMsg();
+//				msg.setUid(1010);
+//				msg.setOid(info.getUid());
+//				msg.setNickName("测试10");
+//				msg.setMsgType(MsgType.USERMSG.getType());
+//				msg.setContentType(MsgType.TXT.getType());
+//				msg.setTime(System.currentTimeMillis());
+//				msg.setPhotoFile("http://img.iknow.bdimg.com/zhidaoribao2014/2015year/0104/jctj.jpg?t=1420329621");
+//				msg.setContent("这里是测试内容， 正在进行测试查看测试效果！......");
+//				db.save(msg);
+//				
+//				msg = new UserMsg();
+//				msg.setUid(1011);
+//				msg.setOid(info.getUid());
+//				msg.setNickName("测试11");
+//				msg.setMsgType(MsgType.USERMSG.getType());
+//				msg.setContentType(MsgType.TXT.getType());
+//				msg.setTime(System.currentTimeMillis());
+//				msg.setPhotoFile("http://img.iknow.bdimg.com/zhidaoribao2014/2015year/0104/jctj.jpg?t=1420329621");
+//				msg.setContent("这里是测试内容， 正在进行测试查看测试效果！......");
+//				db.save(msg);
 			} catch (DbException e) {
 				e.printStackTrace();
 			}

@@ -14,14 +14,14 @@
         android:layout_height="wrap_content" >
 
         <Button
-            android:id="@+id/imageView1"
+            android:id="@+id/back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
             android:background="@drawable/back"
             android:gravity="center"
-            android:onClick="back" />
+            android:onClick="click" />
         <!-- android:onClick="back" -->
 
         <TextView
@@ -63,7 +63,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true" />
+            android:layout_centerVertical="true" 
+            android:visibility="gone"/>
     </RelativeLayout>
 
     <LinearLayout

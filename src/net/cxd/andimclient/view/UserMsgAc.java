@@ -94,9 +94,21 @@ public class UserMsgAc extends BaseActivity {
 		}
 	};
 	
-	public void back(View v){
-		finish();
+	public void click(View v){
+		switch (v.getId()) {
+		case R.id.back:
+			finish();
+			break;
+		case R.id.btn_moremsg:
+			break;
+		case R.id.btn_morebut:
+			break;
+		case R.id.btn_send:
+			
+			break;
+		default:
+			break;
+		}
+		
 	}
-	
-	
 }
