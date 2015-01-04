@@ -21,17 +21,18 @@ public class LocalService extends Service {
 	private ImServer imServer;
 	private Thread ImThread;
 	private Activity ac;
-	
+	private NetBroadCastReceiver castReceiver;
 	@Override
 	public void onCreate() {
 		super.onCreate();
 		Log.i(tag, " service staring ...... ");
+		castReceiver = new NetBroadCastReceiver();
 		IntentFilter filter = new IntentFilter();
 		filter.addAction("im.user.startImServer");
 		filter.addAction("android.net.conn.CONNECTIVITY_CHANGE");
-		registerReceiver(new NetBroadCastReceiver(), filter);
+		registerReceiver(castReceiver, filter);
 		ImServerConfig config = new ImServerConfig();
-		config.ipHost = "192.168.0.159";
+		config.ipHost = "192.168.0.161";
 		config.port = 8000;
 		config.KeepOnlive = true;
 		imServer = new ImServer(config, new MessageListener());
@@ -40,6 +41,7 @@ public class LocalService extends Service {
 
 	@Override
 	public void onDestroy() {
+		unregisterReceiver(castReceiver);
 		super.onDestroy();
 	}
 

@@ -1,7 +1,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/AnimationFade"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent" 
-     style="@style/AnimationFade">
+    android:layout_height="fill_parent"
+    android:descendantFocusability="blocksDescendants" >
 
     <android.support.v4.view.ViewPager
         android:id="@+id/index_page"
@@ -24,6 +25,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="#00000000"
+            android:clickable="false"
+            android:focusableInTouchMode="false"
             android:onClick="changeLayout"
             android:src="@drawable/menu_msg" />
 
@@ -33,6 +36,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="#00000000"
+            android:clickable="false"
+            android:focusableInTouchMode="false"
             android:src="@drawable/menu_my" />
 
         <ImageButton
@@ -41,6 +46,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="#00000000"
+            android:clickable="false"
+            android:focusableInTouchMode="false"
             android:src="@drawable/menu_fabu" />
     </LinearLayout>
 

@@ -1,4 +1,4 @@
-package net.cxd.andimclient.view;
+package net.cxd.andimclient.view.adapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,28 +20,17 @@ import android.widget.TextView;
 
 import com.nb82.view.bitmap.CBitmap;
 
-public class MsgAdapter extends BaseAdapter implements ListAdapter {
+public class IndexMsgAdapter extends BaseAdapter  {
 	private List<UserMsg> list = new ArrayList<UserMsg>();
 	private Context context;
 	private CBitmap cBitmap;
 
-	public MsgAdapter(Context context) {
+	public IndexMsgAdapter(Context context) {
 		this.context = context;
 		MyApplication app = (MyApplication)context;
 		cBitmap = (CBitmap) app.cache.get("cBitmap");
 	}
 
-	@Override
-	public void registerDataSetObserver(DataSetObserver observer) {
-		// TODO Auto-generated method stub
-
-	}
-
-	@Override
-	public void unregisterDataSetObserver(DataSetObserver observer) {
-		// TODO Auto-generated method stub
-
-	}
 
 	@Override
 	public int getCount() {
@@ -52,19 +41,13 @@ public class MsgAdapter extends BaseAdapter implements ListAdapter {
 	@Override
 	public Object getItem(int position) {
 		// TODO Auto-generated method stub
-		return null;
+		return list.get(position);
 	}
 
 	@Override
 	public long getItemId(int position) {
 		// TODO Auto-generated method stub
 		return position;
-	}
-
-	@Override
-	public boolean hasStableIds() {
-		// TODO Auto-generated method stub
-		return false;
 	}
 
 	@Override
@@ -98,36 +81,6 @@ public class MsgAdapter extends BaseAdapter implements ListAdapter {
 			hoder.msg_time.setText(TimeConventUtil.timeConvent(msg.getTime()));
 		}
 		return convertView;
-	}
-
-	@Override
-	public int getItemViewType(int position) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public int getViewTypeCount() {
-		// TODO Auto-generated method stub
-		return 0;
-	}
-
-	@Override
-	public boolean isEmpty() {
-		// TODO Auto-generated method stub
-		return super.isEmpty();
-	}
-
-	@Override
-	public boolean areAllItemsEnabled() {
-		// TODO Auto-generated method stub
-		return false;
-	}
-
-	@Override
-	public boolean isEnabled(int position) {
-		// TODO Auto-generated method stub
-		return false;
 	}
 
 	public List<UserMsg> getList() {

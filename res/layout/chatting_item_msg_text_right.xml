@@ -30,8 +30,8 @@
 	        
 	           <ImageView 
 	           android:id="@+id/iv_userhead" 
-	           android:layout_width="wrap_content"
-	           android:layout_height="wrap_content"
+	           android:layout_width="80dp"
+	           android:layout_height="80dp"
 	           android:layout_marginTop="2dp"
 	           android:focusable="false" 
 	           android:layout_alignParentRight="true" 
@@ -54,7 +54,7 @@
 	            android:layout_marginRight="10dp"
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
-	            android:background="@drawable/menu_msg" 
+	            android:background="@drawable/chatto_bg" 
 	            android:textSize="15sp"
 	            android:textColor="#ff000000"
 	            android:gravity="left|center"
@@ -65,7 +65,7 @@
 	                 
 	                  
 	            <TextView 
-	            android:id="@+id/tv_username1" 
+	            android:id="@+id/tv_username" 
 	            android:layout_width="wrap_content"
 	            android:layout_height="wrap_content"
 	            android:layout_below="@id/iv_userhead"
@@ -73,7 +73,6 @@
 	            android:layout_toRightOf="@id/tv_chatcontent"
 	            android:textSize="15sp"
 	            android:gravity="center"
-	            android:text="aaaaa"
 	            android:textColor="@color/dack"/>
 	        
 	    </RelativeLayout>

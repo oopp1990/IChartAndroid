@@ -24,9 +24,9 @@
         </activity>
         <activity android:name=".view.IndexAc" 
             android:theme="@style/android:Theme.NoTitleBar"/>
-        <activity android:name=".view.UserMsgAc" />
+        <activity android:name=".view.UserMsgAc" 
+            android:theme="@style/android:Theme.NoTitleBar"/>
     </application>
-
     <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.INTERNET" />

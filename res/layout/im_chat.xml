@@ -72,7 +72,8 @@
         android:layout_height="wrap_content"
         android:layout_above="@+id/chat_end"
         android:background="@drawable/chat_msgmore"
-        android:orientation="vertical" >
+        android:orientation="vertical" 
+        android:visibility="gone">
 
         <!-- android:visibility="gone" -->
 

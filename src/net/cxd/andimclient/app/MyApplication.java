@@ -1,6 +1,10 @@
 package net.cxd.andimclient.app;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.List;
+import java.util.Properties;
 
 import net.cxd.andimclient.api.UserService;
 import net.cxd.andimclient.service.LocalService;
@@ -36,9 +40,9 @@ public class MyApplication extends AppContextControll {
 	public void onCreate() {
 		super.onCreate();
 		ctx = this;
-		HttpUri.BASE_URL = "http://192.168.0.159:8080/WebImService/";
+		HttpUri.BASE_URL = "http://192.168.0.161:8080/WebImService/";
 		cache.put("cbitmap", CBitmap.create(this));
-		CFrameDb cFrameDb = CFrameDb.create(this, "ImClient.db", true);
+		CFrameDb cFrameDb = CFrameDb.create(this, "ImClient.db", false);
 		cache.put("cFrameDb", cFrameDb);
 		//
 		// UserHttpService httpService = new UserHttpServiceImpl();
@@ -47,7 +51,6 @@ public class MyApplication extends AppContextControll {
 
 		Intent intent = new Intent(this, LocalService.class);
 		startService(intent);
-
 	}
 
 	/**

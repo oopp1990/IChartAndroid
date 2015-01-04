@@ -7,7 +7,9 @@ import net.cxd.andimclient.util.TaskId;
 import net.cxd.im.entity.ResultBean;
 import net.cxd.im.entity.User;
 import net.cxd.im.entity.UserInfo;
+import net.cxd.im.entity.UserMsg;
 import net.cxd.util.HttpUri;
+import net.cxd.util.MsgType;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -36,7 +38,7 @@ public class StartAc extends BaseActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.im_start);
-		HttpUri.BASE_URL = "http://192.168.0.159:8080/WebImService/";
+		HttpUri.BASE_URL = "http://192.168.0.161:8080/WebImService/";
 		handler = new MyHandler();
 	}
 
@@ -74,20 +76,153 @@ public class StartAc extends BaseActivity {
 	public void freash(Object object) {
 		ResultBean resultBean = (ResultBean) object;
 		if (resultBean.isResult()) {
-			try {
-				User user = new User(name, password);
-				user.setLastLogin(System.currentTimeMillis());
-				if (isLogin)
-					((CFrameDb) app.cache.get("cFrameDb")).update(user);
-				else
-					((CFrameDb) app.cache.get("cFrameDb")).save(user);
-
-			} catch (DbException e) {
-				e.printStackTrace();
-			}
 			UserInfo info = JSON.parseObject(resultBean.getMessage(),
 					UserInfo.class);
 			app.cache.put("userInfo", info);
+			try {
+				User user = new User(name, password);
+				user.setLastLogin(System.currentTimeMillis());
+				CFrameDb db = ((CFrameDb) app.cache.get("cFrameDb"));
+				if (isLogin)
+					db.update(user);
+				else
+					db.save(user);
+
+				UserMsg msg = new UserMsg();
+				msg.setUid(1001);
+				msg.setOid(info.getUid());
+				msg.setNickName("测试1");
+				msg.setMsgType(MsgType.USERMSG.getType());
+				msg.setContentType(MsgType.TXT.getType());
+				msg.setTime(System.currentTimeMillis());
+				msg.setPhotoFile("http://img.iknow.bdimg.com/zhidaoribao2014/2015year/0104/jctj.jpg?t=1420329621");
+				msg.setContent("这里是测试内容， 正在进行测试查看测试效果！......");
+				db.save(msg);
+
+				msg = new UserMsg();
+				msg.setUid(1002);
+				msg.setOid(info.getUid());
+				msg.setNickName("测试2");
+				msg.setMsgType(MsgType.USERMSG.getType());
+				msg.setContentType(MsgType.TXT.getType());
+				msg.setTime(System.currentTimeMillis());
+				msg.setPhotoFile("http://img.iknow.bdimg.com/zhidaoribao2014/2015year/0104/jctj.jpg?t=1420329621");
+				msg.setContent("这里是测试内容， 正在进行测试查看测试效果！......");
+				db.save(msg);
+
+				msg = new UserMsg();
+				msg.setUid(1003);
+				msg.setOid(info.getUid());
+				msg.setNickName("测试3");
+				msg.setMsgType(MsgType.USERMSG.getType());
+				msg.setContentType(MsgType.TXT.getType());
+				msg.setTime(System.currentTimeMillis());
+				msg.setPhotoFile("http://img.iknow.bdimg.com/zhidaoribao2014/2015year/0104/jctj.jpg?t=1420329621");
+				msg.setContent("这里是测试内容， 正在进行测试查看测试效果！......");
+				db.save(msg);
+
+				msg = new UserMsg();
+				msg.setUid(1004);
+				msg.setOid(info.getUid());
+				msg.setNickName("测试4");
+				msg.setMsgType(MsgType.USERMSG.getType());
+				msg.setContentType(MsgType.TXT.getType());
+				msg.setTime(System.currentTimeMillis());
+				msg.setPhotoFile("http://img.iknow.bdimg.com/zhidaoribao2014/2015year/0104/jctj.jpg?t=1420329621");
+				msg.setContent("这里是测试内容， 正在进行测试查看测试效果！......");
+				db.save(msg);
+
+				msg = new UserMsg();
+				msg.setUid(1005);
+				msg.setOid(info.getUid());
+				msg.setNickName("测试5");
+				msg.setMsgType(MsgType.USERMSG.getType());
+				msg.setContentType(MsgType.TXT.getType());
+				msg.setTime(System.currentTimeMillis());
+				msg.setPhotoFile("http://img.iknow.bdimg.com/zhidaoribao2014/2015year/0104/jctj.jpg?t=1420329621");
+				msg.setContent("这里是测试内容， 正在进行测试查看测试效果！......");
+				db.save(msg);
+
+				msg = new UserMsg();
+				msg.setUid(1006);
+				msg.setOid(info.getUid());
+				msg.setNickName("测试6");
+				msg.setMsgType(MsgType.USERMSG.getType());
+				msg.setContentType(MsgType.TXT.getType());
+				msg.setTime(System.currentTimeMillis());
+				msg.setPhotoFile("http://img.iknow.bdimg.com/zhidaoribao2014/2015year/0104/jctj.jpg?t=1420329621");
+				msg.setContent("这里是测试内容， 正在进行测试查看测试效果！......");
+				db.save(msg);
+
+				msg = new UserMsg();
+				msg.setUid(1006);
+				msg.setOid(info.getUid());
+				msg.setNickName("测试6");
+				msg.setMsgType(MsgType.USERMSG.getType());
+				msg.setContentType(MsgType.TXT.getType());
+				msg.setTime(System.currentTimeMillis());
+				msg.setPhotoFile("http://img.iknow.bdimg.com/zhidaoribao2014/2015year/0104/jctj.jpg?t=1420329621");
+				msg.setContent("这里是测试内容， 正在进行测试查看测试效果！......");
+				db.save(msg);
+				
+				msg = new UserMsg();
+				msg.setUid(1007);
+				msg.setOid(info.getUid());
+				msg.setNickName("测试7");
+				msg.setMsgType(MsgType.USERMSG.getType());
+				msg.setContentType(MsgType.TXT.getType());
+				msg.setTime(System.currentTimeMillis());
+				msg.setPhotoFile("http://img.iknow.bdimg.com/zhidaoribao2014/2015year/0104/jctj.jpg?t=1420329621");
+				msg.setContent("这里是测试内容， 正在进行测试查看测试效果！......");
+				db.save(msg);
+				
+				msg = new UserMsg();
+				msg.setUid(1008);
+				msg.setOid(info.getUid());
+				msg.setNickName("测试8");
+				msg.setMsgType(MsgType.USERMSG.getType());
+				msg.setContentType(MsgType.TXT.getType());
+				msg.setTime(System.currentTimeMillis());
+				msg.setPhotoFile("http://img.iknow.bdimg.com/zhidaoribao2014/2015year/0104/jctj.jpg?t=1420329621");
+				msg.setContent("这里是测试内容， 正在进行测试查看测试效果！......");
+				db.save(msg);
+				
+				msg = new UserMsg();
+				msg.setUid(1009);
+				msg.setOid(info.getUid());
+				msg.setNickName("测试9");
+				msg.setMsgType(MsgType.USERMSG.getType());
+				msg.setContentType(MsgType.TXT.getType());
+				msg.setTime(System.currentTimeMillis());
+				msg.setPhotoFile("http://img.iknow.bdimg.com/zhidaoribao2014/2015year/0104/jctj.jpg?t=1420329621");
+				msg.setContent("这里是测试内容， 正在进行测试查看测试效果！......");
+				db.save(msg);
+				
+				msg = new UserMsg();
+				msg.setUid(1010);
+				msg.setOid(info.getUid());
+				msg.setNickName("测试10");
+				msg.setMsgType(MsgType.USERMSG.getType());
+				msg.setContentType(MsgType.TXT.getType());
+				msg.setTime(System.currentTimeMillis());
+				msg.setPhotoFile("http://img.iknow.bdimg.com/zhidaoribao2014/2015year/0104/jctj.jpg?t=1420329621");
+				msg.setContent("这里是测试内容， 正在进行测试查看测试效果！......");
+				db.save(msg);
+				
+				msg = new UserMsg();
+				msg.setUid(1011);
+				msg.setOid(info.getUid());
+				msg.setNickName("测试11");
+				msg.setMsgType(MsgType.USERMSG.getType());
+				msg.setContentType(MsgType.TXT.getType());
+				msg.setTime(System.currentTimeMillis());
+				msg.setPhotoFile("http://img.iknow.bdimg.com/zhidaoribao2014/2015year/0104/jctj.jpg?t=1420329621");
+				msg.setContent("这里是测试内容， 正在进行测试查看测试效果！......");
+				db.save(msg);
+			} catch (DbException e) {
+				e.printStackTrace();
+			}
+
 			Intent intent = new Intent(this, IndexAc.class);
 			startActivity(intent);
 			sendBroadcast(new Intent("im.user.startImServer"));
